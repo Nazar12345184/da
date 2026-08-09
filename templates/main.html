@@ -19,9 +19,9 @@ body {
 }
 
 .container {
-    max-width: 1000px;
+    max-width: 1600px;
     margin: 0 auto;
-    padding: 0 20px;
+  
 }
 
 
@@ -42,7 +42,7 @@ header {
 }
 
 .logo img {
-    height: 30px;
+    height: 60px;
     width: auto;
 }
 
@@ -75,6 +75,24 @@ nav a:hover {
     font-family: 'Arial', sans-serif;
 }
 
+.btn:active {
+  transform: scale(0.88);
+  transition: transform 0.08s ease-out;
+}
+
+.btn {
+  
+  background-color: #ff6700;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+  scale: 1.5;
+  margin: 10px;
+  
+}
+
 
 
 </style>
@@ -90,11 +108,13 @@ nav a:hover {
             </div>
         </div>
         <nav class = "gay">
-            <a href="#">Даун</a>
-            <a href="#">Даун</a>
-            <a href="#">Даун</a>
-            <a href="#">Даун</a>
-            <a href="#">Даун</a>
+             <button class="btn" onclick="location.href='main.html'">news</button>
+             <button class="btn" onclick="location.href='index.html'">matches</button>
+             <button class="btn" onclick="location.href='res.html'">results</button>
+             <button class="btn" onclick="location.href='events.html'">events</button>
+             <button class="btn" onclick="location.href='players.html'">players</button>
+             <button class="btn" onclick="location.href='stats.html'">stats</button>
+             <button class="btn" onclick="location.href='media.html'">media</button>
         </nav>
     </header>
 

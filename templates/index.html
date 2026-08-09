@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     
+</head>
+<style>
+
+body{
+    background-color: rgb(202, 21, 21);
+}
+
+.btn {
+  transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.btn:active {
+  transform: scale(0.88);
+  transition: transform 0.08s ease-out;
+}
+
+.btn {
+  background-color: #ff6700;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+</style>
+<body>
+
+    <button class="btn" onclick="location.href='main.html'">Click me</button>
+    
+
+   
+</body>
+
+<script>
+
+
+
+function SquishButton({ children }) {
+  return (
+    <button
+      style={{ transition: 'transform 0.5s cubic-bezier(0.34,1.56,0.64,1)' }}
+      onPointerDown={(e) => {
+        e.currentTarget.style.transition = 'transform 0.08s ease-out';
+        e.currentTarget.style.transform = 'scale(0.88)';
+      }}
+      onPointerUp={(e) => {
+        e.currentTarget.style.transition =
+          'transform 0.5s cubic-bezier(0.34,1.56,0.64,1)';
+        e.currentTarget.style.transform = 'scale(1)';
+      }}
+    >
+      {children}
+    </button>
+  );
+}
+
+</script>
+
+</html>

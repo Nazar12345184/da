@@ -4,79 +4,101 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-     
 </head>
 <style>
 
-body{
-  margin: 0;
-  padding: 0;
-  background-color: rgb(46, 38, 38);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  position: relative;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(31, 39, 107);
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
 
-
-.top-left-img {
-    position: absolute;
-    top: -22px;
-    left: -10px;
-    padding: 0px;
+header {
+    background: #1a1a1a;
+    padding: 12px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
 }
 
-.btn:active {
-  transform: scale(0.88);
-  transition: transform 0.08s ease-out;
+.left {
+    display: flex;
+    align-items: center;
+    gap: 20px;
 }
 
-.btn {
-  
-  background-color: #ff6700;
-  color: white;
-  border: none;
-  padding: 10px 16px;
-  border-radius: 8px;
-  transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
-  
+.logo img {
+    height: 30px;
+    width: auto;
 }
+
+nav {
+    display: flex;
+    gap: 5px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 6px 10px;
+    font-size: 20px;
+    font-family: 'Arial', sans-serif;
+}
+
+nav a:hover {
+    color: white;
+}
+
+.gay{
+    display: flex;
+    gap: 60px;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 0 auto;
+    font-size: 28px;
+    font-family: 'Arial', sans-serif;
+}
+
+
 
 </style>
+
 <body>
 
-    <img class="top-left-img" src="gg.png" alt="Image" width="170" height="110">
-    <button class="btn" onclick="location.href='index.html'">Click me</button>
-    
+<div class="container">
 
-   
+    <header>
+        <div class="left">
+            <div class="logo">
+                <img src="gg.png" alt="Logo">
+            </div>
+        </div>
+        <nav class = "gay">
+            <a href="#">Даун</a>
+            <a href="#">Даун</a>
+            <a href="#">Даун</a>
+            <a href="#">Даун</a>
+            <a href="#">Даун</a>
+        </nav>
+    </header>
+
+</div>
+
 </body>
-
-<script>
-
-
-
-function SquishButton({ children }) {
-  return (
-    <button
-      style={{ transition: 'transform 0.5s cubic-bezier(0.34,1.56,0.64,1)' }}
-      onPointerDown={(e) => {
-        e.currentTarget.style.transition = 'transform 0.08s ease-out';
-        e.currentTarget.style.transform = 'scale(0.88)';
-      }}
-      onPointerUp={(e) => {
-        e.currentTarget.style.transition =
-          'transform 0.5s cubic-bezier(0.34,1.56,0.64,1)';
-        e.currentTarget.style.transform = 'scale(1)';
-      }}
-    >
-      {children}
-    </button>
-  );
-}
-
-</script>
-
 </html>

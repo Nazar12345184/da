@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Match 1</title>
 </head>
 <style>
 
@@ -37,7 +37,6 @@ header {
     gap: 12px;
     border-radius: 0 0 20px 20px;
     box-shadow: 0 24px 60px rgba(0, 0, 0, 0.32);
-    margin-bottom: 28px;
 }
 
 .left {
@@ -54,7 +53,7 @@ header {
 
 nav {
     display: flex;
-    gap: 10px;
+    gap: 18px;
     flex-wrap: wrap;
     justify-content: center;
 }
@@ -110,14 +109,13 @@ h1 {
     font-size: 3rem;
     letter-spacing: 0.14em;
     text-transform: uppercase;
-
 }
 
 .barbos,
 .results {
     max-width: 980px;
-    margin: 32px auto 32px;
-    padding: 28px;
+    margin: 0 auto 26px;
+    padding: 24px;
     background: rgba(255, 255, 255, 0.06);
     border: 1px solid rgba(255, 255, 255, 0.12);
     border-radius: 26px;
@@ -140,8 +138,7 @@ h1 {
     display: grid;
     grid-template-columns: 1fr auto;
     align-items: center;
-    gap: 500px;
-    margin: 24px auto;
+    gap: 20px;
     padding: 22px;
     background: rgba(15, 18, 45, 0.92);
     border: 1px solid rgba(255, 255, 255, 0.08);
@@ -152,6 +149,21 @@ h1 {
     font-size: 1.32rem;
     font-weight: 700;
     color: #ffffff;
+}
+
+.inline-title {
+    display: flex;
+    gap: 200px;
+    flex-wrap: wrap;
+    align-items: center;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #f7f7ff;
+}
+
+.title-part {
+    display: inline-block;
+    white-space: nowrap;
 }
 
 .result-subtitle {
@@ -201,18 +213,29 @@ h1 {
 
 </div>
 
-<h1>Results</h1>
-
-
+<h1>BARBOS VS OPPONENT</h1>
 
 <div class="results">
     <article class="result-card">
         <div>
-            <div class="result-title" onclick="location.href='match1.html'" >Barbos vs Opponent</div>
+            <div class="result-title">Barbos vs Opponent</div>
+            <div class="result-subtitle">Перший матч турніру</div>
         </div>
         <div>
-            <div class="result-score"> 2:0</div>
+            <div class="result-score">13 : 8 - inferno</div>
+            <div class="result-score">16 : 13 - cache</div>
             
+        </div>
+    </article>
+    <article class="result-card">
+        <div>
+            <div class="result-title inline-title">
+                <span class="title-part">MVP OF MATCH - NA1ZEL</span>
+                <span class="title-part">POINTS - 77</span>
+                <span class="title-part">K/D - 1.67</span>
+            </div>
+        </div>
+        <div>
         </div>
     </article>
 </div>

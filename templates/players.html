@@ -31,10 +31,11 @@ header {
     background: rgba(10, 12, 30, 0.95);
     padding: 14px 18px;
     display: flex;
-    justify-content: space-between;
+    flex-direction: row;
+    justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 40px;
     border-radius: 0 0 18px 18px;
     box-shadow: 0 20px 50px rgba(0, 0, 0, 0.28);
     margin-bottom: 22px;
@@ -90,7 +91,7 @@ nav a:hover {
     transition: transform 0.25s ease, box-shadow 0.25s ease;
     box-shadow: 0 14px 26px rgba(255, 103, 0, 0.22);
     cursor: pointer;
-    margin: 4px 8px;
+    margin: 0;
 }
 
 .btn:hover {
@@ -213,7 +214,7 @@ nav a:hover {
 
     <div class="players">
         <article class="player-card">
-            <h2>NA1ZEL</h2>
+            <h2 onclick="location.href='NA1ZEL.html'">NA1ZEL</h2>
             <div class="player-meta">
                 <div class="player-badge">MVP</div>
                 <div class="player-role">Entry Fragger</div>
@@ -225,7 +226,7 @@ nav a:hover {
         </article>
 
         <article class="player-card">
-            <h2>DM1TrIy</h2>
+            <h2 onclick="location.href='DM1TrIy.html'">DM1TrIy</h2>
             <div class="player-meta">
                 <div class="player-badge">Captain</div>
                 <div class="player-role">Support</div>
@@ -237,7 +238,7 @@ nav a:hover {
         </article>
 
         <article class="player-card">
-            <h2>W0NDERFUL</h2>
+            <h2 onclick="location.href='W0NDERFUL.html'">W0NDERFUL</h2>
             <div class="player-meta">
                 <div class="player-badge">Sharpshooter</div>
                 <div class="player-role">AWPer</div>
@@ -245,6 +246,17 @@ nav a:hover {
             <div class="card-footer">
                 <span>K/D: 1.59</span>
                 <span class="card-link">match5</span>
+            </div>
+        </article>
+
+        <article class="player-card">
+            <h2 onclick="location.href='m0on.html'">m0on</h2>
+            <div class="player-meta">
+                <div class="player-badge">m0on</div>
+                <div class="player-role">Support</div>
+            </div>
+            <div class="card-footer">
+                <span>Barbos</span>
             </div>
         </article>
     </div>

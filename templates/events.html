@@ -3,122 +3,288 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Events</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: radial-gradient(circle at top, rgba(87, 128, 255, 0.18), transparent 35%),
+                linear-gradient(180deg, #1f276b 0%, #101420 100%);
+            color: #f2f2f2;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 18px;
+        }
+
+        header {
+            background: rgba(10, 12, 30, 0.95);
+            padding: 14px 18px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 40px;
+            border-radius: 0 0 18px 18px;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.28);
+            margin-bottom: 22px;
+        }
+
+        .left {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .logo img {
+            height: 60px;
+            width: auto;
+            filter: drop-shadow(0 0 16px rgba(255, 103, 0, 0.45));
+        }
+
+        nav {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 6px 10px;
+            font-size: 18px;
+            font-family: 'Arial', sans-serif;
+        }
+
+        nav a:hover {
+            color: white;
+        }
+
+        .gay {
+            display: flex;
+            gap: 14px;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .btn:active {
+            transform: scale(0.88);
+            transition: transform 0.08s ease-out;
+        }
+
+        .btn {
+            background-color: #ff6700;
+            color: white;
+            border: none;
+            padding: 10px 18px;
+            border-radius: 10px;
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+            box-shadow: 0 14px 26px rgba(255, 103, 0, 0.22);
+            cursor: pointer;
+            margin: 0;
+        }
+
+        .btn:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 18px 30px rgba(255, 103, 0, 0.28);
+        }
+
+        .events-wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            margin-top: 30px;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .event-block {
+            background: #0a0c1e;
+            padding: 20px 25px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-bottom: 2px solid rgba(49, 45, 97, 0.705);
+            min-height: 205px;
+        }
+
+        .event-block h2 {
+            font-size: 22px;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: #c5c1c1;
+            letter-spacing: 0.5px;
+        }
+
+        .event-item {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 15px;
+            padding: 12px 15px;
+            background: rgba(36, 35, 35, 0.7);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+            transition: all 0.2s ease;
+            cursor: pointer;
+        }
+
+        .event-item:hover {
+            background: rgba(219, 218, 218, 0.288);
+            border-radius: 8px;
+            transform: translateY(-1px);
+        }
+
+        .event-item:last-child {
+            border-bottom: none;
+        }
+
+        .event-icon {
+            width: 30px;
+            height: 30px;
+            object-fit: contain;
+            flex-shrink: 0;
+        }
+
+        .event-name {
+            font-size: 16px;
+            font-weight: 500;
+            color: #ffffff;
+            flex: 1;
+            min-width: 150px;
+        }
+
+        .event-date {
+            font-size: 14px;
+            color: #aaa;
+            min-width: 120px;
+        }
+
+        .event-prize {
+            font-size: 14px;
+            color: #e66c1b;
+            font-weight: 600;
+            min-width: 80px;
+            text-align: right;
+        }
+    </style>
 </head>
-<style>
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    background-color: rgb(31, 39, 107);
-    min-height: 100vh;
-}
-
-.container {
-    max-width: 1600px;
-    margin: 0 auto;
-  
-}
-
-
-header {
-    background: #1a1a1a;
-    padding: 12px 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 10px;
-}
-
-.left {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-}
-
-.logo img {
-    height: 60px;
-    width: auto;
-}
-
-nav {
-    display: flex;
-    gap: 5px;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-nav a {
-    color: white;
-    text-decoration: none;
-    padding: 6px 10px;
-    font-size: 20px;
-    font-family: 'Arial', sans-serif;
-}
-
-nav a:hover {
-    color: white;
-}
-
-.gay{
-    display: flex;
-    gap: 60px;
-    flex-wrap: wrap;
-    align-items: center;
-    margin: 0 auto;
-    font-size: 28px;
-    font-family: 'Arial', sans-serif;
-}
-
-.btn:active {
-  transform: scale(0.88);
-  transition: transform 0.08s ease-out;
-}
-
-.btn {
-  
-  background-color: #ff6700;
-  color: white;
-  border: none;
-  padding: 10px 16px;
-  border-radius: 8px;
-  transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
-  scale: 1.5;
-  margin: 10px;
-  
-}
-
-
-
-</style>
-
 <body>
 
-<div class="container">
+    <div class="container">
 
-    <header>
-        <div class="left">
-            <div class="logo">
-                <img src="gg.png" alt="Logo">
+        <header>
+            <div class="left">
+                <div class="logo">
+                    <img src="gg.png" alt="Logo">
+                </div>
             </div>
-        </div>
-        <nav class = "gay">
-             <button class="btn" onclick="location.href='main.html'">news</button>
-             <button class="btn" onclick="location.href='index.html'">matches</button>
-             <button class="btn" onclick="location.href='res.html'">results</button>
-             <button class="btn" onclick="location.href='events.html'">events</button>
-             <button class="btn" onclick="location.href='players.html'">players</button>
-             <button class="btn" onclick="location.href='stats.html'">stats</button>
-             <button class="btn" onclick="location.href='media.html'">media</button>
-        </nav>
-    </header>
+            <nav class="gay">
+                <button class="btn" onclick="location.href='main.html'">news</button>
+                <button class="btn" onclick="location.href='index.html'">matches</button>
+                <button class="btn" onclick="location.href='res.html'">results</button>
+                <button class="btn" onclick="location.href='events.html'">events</button>
+                <button class="btn" onclick="location.href='players.html'">players</button>
+                <button class="btn" onclick="location.href='stats.html'">stats</button>
+                <button class="btn" onclick="location.href='media.html'">media</button>
+            </nav>
+        </header>
 
-</div>
+        <div class="events-wrapper">
+
+            <div class="event-block">
+                <h2>Ongoing events</h2>
+
+                <div class="event-item" onclick="location.href='../eventstab/Elogikawc26.html'">
+                    <img src="gg.png" alt="icon" class="event-icon">
+                    <span class="event-name">Elogika World Cup 2026</span>
+                    <span class="event-date">Aug 12th - Aug 23rd</span>
+                    <span class="event-prize">на щелбан</span>
+                </div>
+                
+                <div class="event-item" onclick="location.href='../eventstab/BLASTopenkyiv26.html'">
+                    <img src="gg.png" alt="icon" class="event-icon">
+                    <span class="event-name">BLAST Open Kyiv 2026</span>
+                    <span class="event-date">Aug 14th - Sep 6th</span>
+                    <span class="event-prize">$1,100,000</span>
+                </div>
+
+            </div>
+
+            <div class="event-block">
+                <h2>Events</h2>
+
+                <div class="event-item" onclick="location.href='../eventstab/lobbysf.html'">
+                    <img src="gg.png" alt="icon" class="event-icon">
+                    <span class="event-name">Лобби на СФах</span>
+                    <span class="event-date">Aug 12th - Aug 14th</span>
+                    <span class="event-prize">На интерес</span>
+                </div>
+
+                <div class="event-item" onclick="location.href='../eventstab/1v1LOGIKAcup.html'">
+                    <img src="gg.png" alt="icon" class="event-icon">
+                    <span class="event-name">1v1 LOGIKA cup</span>
+                    <span class="event-date">Aug 6th - Aug 13th</span>
+                    <span class="event-prize">$2,500</span>
+                </div>
+
+                <div class="event-item" onclick="location.href='../eventstab/LOSHARA.html'">
+                    <img src="gg.png" alt="icon" class="event-icon">
+                    <span class="event-name">Если прочел - лох</span>
+                    <span class="event-date">Aug 20th - Aug 25th</span>
+                    <span class="event-prize">ахахахха</span>
+                </div>
+
+                <div class="event-item" onclick="location.href='../eventstab/gladvalakascup.html'">
+                    <img src="gg.png" alt="icon" class="event-icon">
+                    <span class="event-name">Glad Valakas cup</span>
+                    <span class="event-date">Aug 1st - Aug 6th</span>
+                    <span class="event-prize">$50,000</span>
+                </div>
+
+                <div class="event-item">
+                    <img src="gg.png" alt="icon" class="event-icon">
+                    <span class="event-name">Сколько можно(не нажимаеться)</span>
+                    <span class="event-date">Aug 15th - Aug 23rd</span>
+                    <span class="event-prize">5к бачей</span>
+                </div>
+
+            </div>
+
+            <div class="event-block">
+                <h2>Future Events</h2>
+
+                <div class="event-item" onclick="location.href='../eventstab/pudgewars.html'">
+                    <img src="gg.png" alt="icon" class="event-icon">
+                    <span class="event-name">Pudge wars cup</span>
+                    <span class="event-date">Aug 18th - Aug 30th</span>
+                    <span class="event-prize">150 гривен</span>
+                </div>
+
+                <div class="event-item" onclick="location.href='../eventstab/yanedaun.html'">
+                    <img src="gg.png" alt="icon" class="event-icon">
+                    <span class="event-name">я ДАун</span>
+                    <span class="event-date">Aug 18th - Aug 30th</span>
+                    <span class="event-prize">сколько????</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
 
 </body>
 </html>

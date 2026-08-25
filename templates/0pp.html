@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NA1ZEL — Профіль гравця</title>
     <style>
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+        }
+
         html, body {
             width: 100%;
             height: 100%;
@@ -201,7 +207,7 @@
             box-shadow: none;
         }
 
-.results > .result-card:last-child {
+.results > .result-card:last-child:nth-child(odd) {
     grid-column: 1 / -1;
     justify-self: center;
     max-width: 520px;
@@ -266,26 +272,18 @@
 
     <div class="container">
         <section class="profile-card">
-            <h1>m0on</h1>
-            <div class="subtitle">support</div>
-            <p>m0on — гравець barbos</p>
+            <h1>0pp</h1>
+            <div class="subtitle">Entry Fragger</div>
+            <p>0pp — гравець opponent</p>
             <ul class="profile-list">
-                <li><span>Нік</span><span>m0on</span></li>
-                <li><span>команда</span><span>BARBOS</span></li>
-                <li><span>Роль</span><span>support</span></li>
-                <li><span>Стиль</span><span>Агресивний</span></li>
+                <li><span>Нік</span><span>0pp</span></li>
+                <li><span>команда</span><span>opponent</span></li>
+                <li><span>Роль</span><span>AWPER</span></li>
+                <li><span>Стиль</span><span>спокійний</span></li>
             </ul>
             <h1>Недавні матчі</h1>
             <div class="results">
-                <article class="result-card">
-                    <div>
-                        <div class="result-title" onclick="location.href='match2.html'">Barbos vs NAVI</div>
-                    </div>
-                    <div>
-                        <div class="result-score">3:2</div>
-                    </div>
-                </article>
-                <article class="result-card">
+                    <article class="result-card">
                     <div>
                         <div class="result-title" onclick="location.href='match1.html'">Barbos vs Opponent</div>
                     </div>
@@ -293,14 +291,16 @@
                         <div class="result-score">2:0</div>
                     </div>
                 </article>
+
                 <article class="result-card">
                     <div>
-                        <div class="result-title" onclick="location.href='match6.html'">Barbos vs BC.GAME</div>
+                        <div class="result-title" onclick="location.href='match7.html'">opponent vs AUSTRALIS</div>
                     </div>
                     <div>
-                        <div class="result-score">2:1</div>
+                        <div class="result-score">2:0</div>
                     </div>
                 </article>
+
             </div>
         </section>
     </div>

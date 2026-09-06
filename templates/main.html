@@ -8,24 +8,38 @@
 </head>
 <body>
 
-<div class="container">
-
-    <header>
-        <div class="left">
-            <div class="logo">
-                <img src="../templates/gg.png" alt="Logo">
-            </div>
-            <a class="brand" href="../zra/bet.html" style="color: white; font-size: 28px; font-weight: 800; text-decoration: none;">Bet-King</a>
+<header>
+    <div class="left">
+        <div class="logo">
+            <img src="../templates/gg.png" alt="Logo">
         </div>
-        <nav class="gay">
-             <button class="btn" onclick="location.href='../templates/main.html'">news</button>
-             <button class="btn" onclick="location.href='../templates/index.html'">matches</button>
-             <button class="btn" onclick="location.href='../templates/res.html'">results</button>
-             <button class="btn" onclick="location.href='../templates/events.html'">events</button>
-             <button class="btn" onclick="location.href='../templates/players.html'">players</button>
-             <button class="btn" onclick="location.href='../templates/media.html'">media</button>
-        </nav>
-    </header>
+        <a class="brand" href="../zra/bet.html">Bet-King</a>
+    </div>
+    <nav class="gay">
+        <button class="btn-nav active" onclick="location.href='../templates/main.html'">News</button>
+        <button class="btn-nav" onclick="location.href='../templates/index.html'">Matches</button>
+        <button class="btn-nav" onclick="location.href='../templates/res.html'">Results</button>
+        <button class="btn-nav" onclick="location.href='../templates/events.html'">Events</button>
+        <button class="btn-nav" onclick="location.href='../templates/players.html'">Players</button>
+        <button class="btn-nav" onclick="location.href='../templates/media.html'">Media</button>
+    </nav>
+    <div class="header-right">
+        <button class="header-signin">Sign in</button>
+    </div>
+</header>
+
+<div class="page-layout">
+    <aside class="side-ad" aria-label="Advertisement space"></aside>
+    <div class="container">
+
+    <div class="ad-section">
+        <div class="ad-banner ad-banner-leaderboard">
+            <img src="../ads/advertisement1.png" alt="Advertisement 1">
+        </div>
+        <div class="ad-banner ad-banner-rect">
+            <img src="../ads/advertisement2.png" alt="Advertisement 2">
+        </div>
+    </div>
 
     <main class="news-grid">
 
@@ -65,13 +79,106 @@
             <button class="btn" type="button" onclick="location.href='../templates/events.html'">переглянути в евентах</button>
         </article>
 
+        <article class="news-card">
+            <div>
+                <span class="news-card__meta">27 Aug 2026</span>
+                <h2>нова зірка команди готується до великого дебюту</h2>
+                <p>молодий гравець провів серію тренувань і вже встиг здивувати капітана команди.</p>
+            </div>
+            <button class="btn" type="button" onclick="location.href='../templates/players.html'">переглянути гравців</button>
+        </article>
+
+        <article class="news-card">
+            <div>
+                <span class="news-card__meta">28 Aug 2026</span>
+                <h2>неймовірний камбек у вечірньому матчі</h2>
+                <p>команда програвала з рахунком 0:1, але повернулася в гру на останніх раундах.</p>
+            </div>
+            <button class="btn" type="button" onclick="location.href='../templates/match1.html'">відкрити матч</button>
+        </article>
+
+        <article class="news-card">
+            <div>
+                <span class="news-card__meta">30 Aug 2026</span>
+                <h2>найкращі моменти тижня вже доступні у медіа</h2>
+                <p>зібрали найяскравіші хайлайти, сміливі рішення та найгучніші перемоги команд.</p>
+            </div>
+            <button class="btn" type="button" onclick="location.href='../templates/media.html'">дивитися хайлайти</button>
+        </article>
+
+        <article class="news-card">
+            <div>
+                <span class="news-card__meta">01 Sep 2026</span>
+                <h2>новий сезон турнірів стартує вже цього тижня</h2>
+                <p>розклад оновлено: попереду кваліфікації, напружені фінали та кілька несподіваних учасників.</p>
+            </div>
+            <button class="btn" type="button" onclick="location.href='../templates/events.html'">відкрити події</button>
+        </article>
 
          
-
+</div>
+    <aside class="news-sidebar" aria-label="Ongoing events">
+        <div class="news-sidebar__header">Ongoing events</div>
+        <a class="ongoing-event" href="../eventstab/Elogikawc26.html">
+            <span class="ongoing-event__icon">LOG</span>
+            <span class="ongoing-event__name">Elogika World Cup 2026</span>
+            <span class="ongoing-event__date">Aug 12 - Aug 23</span>
+            <strong class="ongoing-event__prize">на щелбан</strong>
+        </a>
+        <a class="ongoing-event" href="../eventstab/BLASTopenkyiv26.html">
+            <span class="ongoing-event__icon">LOG</span>
+            <span class="ongoing-event__name">BLAST Open Kyiv 2026</span>
+            <span class="ongoing-event__date">Aug 14 - Sep 6</span>
+            <strong class="ongoing-event__prize">$1,100,000</strong>
+        </a>
+        <div class="news-sidebar__header news-sidebar__header--past">Past events</div>
+        <a class="past-event" href="../eventstab/lobbysf.html">
+            <span class="past-event__name">Лобби на СФах</span>
+            <span class="past-event__date">Aug 12 - Aug 14</span>
+        </a>
+        <a class="past-event" href="../eventstab/1v1LOGIKAcup.html">
+            <span class="past-event__name">1v1 LOGIKA cup</span>
+            <span class="past-event__date">Aug 6 - Aug 13</span>
+        </a>
+        <a class="past-event" href="../eventstab/gladvalakascup.html">
+            <span class="past-event__name">Glad Valakas cup</span>
+            <span class="past-event__date">Aug 1 - Aug 6</span>
+        </a>
+        <a class="past-event" href="../eventstab/LOSHARA.html">
+            <span class="past-event__name">Если прочел - лох</span>
+            <span class="past-event__date">Aug 20 - Aug 25</span>
+        </a>
+        <div class="sidebar-ad" aria-label="Advertisement space">ADVERTISEMENT</div>
+    </aside>
+</div>
         
     </main>
 
-</div>
+    <section class="previous-news" aria-labelledby="previous-news-title">
+        <h2 id="previous-news-title">Previous news</h2>
+        <a class="previous-news__item" href="../news/bit.html">
+            <span class="previous-news__flag">UA</span>
+            <span class="previous-news__title">b1t розповів про підготовку команди до нового фіналу</span>
+            <span class="previous-news__time">2 days ago</span>
+        </a>
+        <a class="previous-news__item" href="../templates/media.html">
+            <span class="previous-news__flag">EU</span>
+            <span class="previous-news__title">найкращі раунди тижня: п'ять моментів, які варто побачити</span>
+            <span class="previous-news__time">3 days ago</span>
+        </a>
+        <a class="previous-news__item" href="../templates/players.html">
+            <span class="previous-news__flag">BR</span>
+            <span class="previous-news__title">команди назвали гравців, які стали відкриттям сезону</span>
+            <span class="previous-news__time">4 days ago</span>
+        </a>
+        <a class="previous-news__item" href="../templates/events.html">
+            <span class="previous-news__flag">PL</span>
+            <span class="previous-news__title">організатори оголосили розклад наступного етапу</span>
+            <span class="previous-news__time">5 days ago</span>
+        </a>
+    </section>
+
+
 
 <div class="glow-orb glow-orb-orange"></div>
 <div class="glow-orb glow-orb-cyan"></div>

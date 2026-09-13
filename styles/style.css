@@ -1159,7 +1159,8 @@ header {
 
 .ad-section {
     display: grid;
-    grid-template-columns: minmax(0, 1fr) 300px;
+    width: 100%;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 300px);
     gap: 8px;
     margin-bottom: 12px;
 }
@@ -1168,6 +1169,8 @@ header {
     background: #171b1f;
     border-color: #303a43;
     border-radius: 2px;
+    min-width: 0;
+    width: 100%;
 }
 
 .ad-banner-leaderboard {
@@ -1176,7 +1179,6 @@ header {
 }
 
 .ad-banner-rect {
-    width: 300px;
     height: 88px;
 }
 
@@ -1242,8 +1244,10 @@ h1, h2, h3 {
 }
 
 .ad-barbos {
-  width: auto;
-  max-width: auto;
-  height: auto;
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 

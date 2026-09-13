@@ -100,13 +100,13 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    width: 100%;
     max-width: 1100px;
     margin: 0 auto;
     padding: 0 20px 48px;
     position: relative;
     z-index: 2;
-    min-width: 320px;
-    max-width: 1100px;
+    min-width: 0;
 }
 
 /* --- Header Navigation Bar (Full Width) --- */
@@ -391,17 +391,19 @@ nav a:hover, .back-link:hover {
 }
 
 .matches {
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    max-width: 720px;
-    margin: 14px 0;
+    grid-template-columns: 1fr;
+    width: 100%;
+    max-width: none;
+    margin: 16px 0;
 }
 
 .results {
-    max-width: 680px;
+    width: 100%;
+    max-width: 760px;
 }
 
 .containerresults .results {
-    width: min(100%, 680px);
+    width: min(100%, 760px);
 }
 
 .players {
@@ -480,6 +482,15 @@ nav a:hover, .back-link:hover {
     justify-content: space-between;
     align-items: center;
     gap: 12px;
+    padding: 12px 14px;
+}
+
+.match-card {
+    padding: 18px 20px;
+}
+
+.match-title {
+    font-size: 16px;
 }
 
 .match-title, .result-title {
@@ -490,6 +501,10 @@ nav a:hover, .back-link:hover {
     margin: 4px 0;
     cursor: pointer;
     transition: color 0.2s ease;
+}
+
+.result-title {
+    font-size: 13px;
 }
 
 .match-title:hover, .result-title:hover {
@@ -505,10 +520,26 @@ nav a:hover, .back-link:hover {
     margin-top: 2px;
 }
 
+.result-score {
+    font-size: 13px;
+}
+
+.match-info {
+    font-size: 16px;
+}
+
+.match-meta, .match-details {
+    font-size: 12px;
+}
+
 .result-subtitle, .match-meta, .match-details {
     color: var(--text-muted);
     font-size: 11px;
     margin-top: 2px;
+}
+
+.result-subtitle {
+    font-size: 11px;
 }
 
 .inline-title {
@@ -907,11 +938,19 @@ header {
 
 .page-layout {
     display: grid;
-    grid-template-columns: minmax(110px, 160px) minmax(0, 1060px) minmax(110px, 160px);
+    grid-template-columns: minmax(110px, 160px) minmax(0, 1fr);
     gap: 12px;
     max-width: 1400px;
     margin: 0 auto;
     align-items: start;
+}
+
+.page-layout:has(.news-sidebar) {
+    grid-template-columns: minmax(110px, 160px) minmax(0, 1060px) minmax(110px, 160px);
+}
+
+.page-layout > .side-ad:last-child {
+    display: none;
 }
 
 .page-layout .container {
@@ -1180,6 +1219,10 @@ h1, h2, h3 {
 }
 
 @media (max-width: 700px) {
+    .matches {
+        grid-template-columns: 1fr;
+    }
+
     .ad-section {
         grid-template-columns: 1fr;
     }
